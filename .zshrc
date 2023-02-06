@@ -73,7 +73,63 @@ ZSH_THEME="spaceship"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions pyenv)
+plugins=(
+    zsh-syntax-highlighting 
+    zsh-autosuggestions 
+    
+    git 
+    git-flow 
+    
+    ansible
+    autopep8
+    aws
+    # bazel
+    bower
+    branch
+    brew
+    celery
+    charm
+    # chucknorris
+    cp
+    docker
+    docker-compose
+    docker-machine
+    dotnet
+    gcloud
+    github
+    golang
+    iterm2
+    kubectl
+    kubectx
+    macos
+    mongo-atlas
+    mongocli
+    nmap
+    node
+    npm
+    nvm
+    pep8
+    pip
+    pipenv
+    poetry
+    postgres
+    pre-commit
+    pyenv 
+    pylint
+    python 
+    redis-cli
+    ssh-agent
+    sudo
+    terraform
+    virtualenv 
+    # virtualenvwrapper
+    vscode
+    xcode
+    yarn
+
+    zsh-interactive-cd
+    zsh-navigation-tools
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,25 +160,6 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
 
-
-SPACESHIP_PROMPT_ORDER=(
-  user          # Username section
-  dir           # Current directory section
-  host          # Hostname section
-  git           # Git section (git_branch + git_status)
-  hg            # Mercurial section (hg_branch  + hg_status)
-  exec_time     # Execution time
-  line_sep      # Line break
-#  vi_mode       # Vi-mode indicator
-  jobs          # Background jobs indicator
-  exit_code     # Exit code section
-  char          # Prompt character
-)
-SPACESHIP_USER_SHOW=always
-SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_CHAR_SYMBOL="❯"
-SPACESHIP_CHAR_SUFFIX=" "
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
@@ -130,3 +167,5 @@ export NVM_DIR="$HOME/.nvm"
 
 # export PATH="$(pyenv root)/shims:$PATH"
 
+export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
+export PATH="/usr/local/opt/openssl@3/bin:$PATH"
